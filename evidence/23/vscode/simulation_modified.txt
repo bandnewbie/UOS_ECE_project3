@@ -1,0 +1,3 @@
+VCD info: dumpfile wave.vcd opened for output.
+FATAL: C:\UOS_ECE_project3\lab3_23_mmss_clock\sim\tb_mmss_counter.sv:13: time=00:05
+       Time: 431000  Scope: tb_mmss_counter.check_time

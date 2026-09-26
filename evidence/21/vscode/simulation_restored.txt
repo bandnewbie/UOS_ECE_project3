@@ -1,0 +1,3 @@
+VCD info: dumpfile wave.vcd opened for output.
+LAB3_PIEZO_PASS edges=5
+C:\UOS_ECE_project3\lab3_21_piezo\sim\tb_piezo.sv:20: $finish called at 551000 (1ps)
