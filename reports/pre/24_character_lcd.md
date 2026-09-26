@@ -1,6 +1,6 @@
 # 실험 전 레포트: LAB3-24 · 문자 LCD 제어
 
-작성자: 박건우 (2025440050) / 작성일: 2026-09-26 / 소스 커밋: (GitHub push 후 기재) / workspace: `lab3_24_character_lcd/FPGA.code-workspace` / OS: Windows / Python: (01 Check tools 출력 기재) / 시뮬레이터 버전: Icarus Verilog 12.0 (devel) (s20150603-1539-g2693dd32b)
+작성자: 박건우 (2025440050) / 작성일: 2026-09-26 / 소스 커밋: [bd97662](https://github.com/bandnewbie/UOS_ECE_project3/commit/bd976622c324f9dd08479164d65265530460d6a1) / workspace: `lab3_24_character_lcd/FPGA.code-workspace` / OS: Windows / Python: Python 3.14.7 / 시뮬레이터 버전: Icarus Verilog 12.0 (devel) (s20150603-1539-g2693dd32b)
 
 ## 목적과 예상 동작
 
