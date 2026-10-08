@@ -2,7 +2,7 @@
 
 - 작성자: 박건우 (2025440050) / 분반·조: 이준화 교수님, 이해리 조교님 / G조
 - 실험일: 2026-09-28
-- 소스 커밋: {{COMMIT_URL}}
+- 소스 커밋: [e17fc28](https://github.com/bandnewbie/UOS_ECE_project3/commit/e17fc28a6007147874ccfc1bbdadceca447086d9)
 - 도구·버전: VS Code + Icarus Verilog 12.0 (fpga-lab-template v2.0.2), Vivado 2026.1
 - part: xc7s75fgga484-1 / 설계 top: `lab3_uart_echo` / 시뮬레이션 top: `tb_uart_echo` / XDC: `lab3_uart_echo/constraints/lab3_uart_echo.xdc`
 - 수행 PC: 본인 PC (DESKTOP-VM8EHT6)
@@ -15,9 +15,18 @@
 | Vivado (XSim, Run All) | `LAB3_UART_ECHO_PASS checks=3` | 9,910 ns |
 
 - Vivado 로그·캡처:
-{{VIVADO_25}}
+- [tcl_console.txt](<../../evidence/25/vivado/tcl_console.txt>)
+![화면 캡처 2026-09-28 132254](<../../evidence/25/vivado/화면 캡처 2026-09-28 132254.png>)
+
+![화면 캡처 2026-09-28 132632](<../../evidence/25/vivado/화면 캡처 2026-09-28 132632.png>)
+
 - VS Code 로그·캡처:
-{{VSCODE_25}}
+- [simulation.txt](<../../evidence/25/vscode/simulation.txt>)
+- [simulation_modified.txt](<../../evidence/25/vscode/simulation_modified.txt>)
+- [simulation_restored.txt](<../../evidence/25/vscode/simulation_restored.txt>)
+![wave](<../../evidence/25/vscode/wave.png>)
+
+- [wave.vcd](<../../evidence/25/vscode/wave.vcd>)
 
 ## 합성·구현·비트스트림
 
@@ -25,7 +34,7 @@
 - DRC: 오류 0건 (CFGBVS-1 경고 1건)
 - 타이밍: WNS 14.617 ns, WHS 0.131 ns, 실패 endpoint 0 (All user specified timing constraints are met)
 - 경고: 합성 경고 0건, TIMING-18 9건, CFGBVS-1 1건
-- bit 경로: {{BIT_PATH_25}} / 크기: {{BIT_SIZE_25}} bytes / SHA-256: {{BIT_SHA_25}}
+- bit 경로: lab3_25_uart_echo/vivado/uart_echo.runs/impl_1/lab3_uart_echo.bit / 크기: 3,687,017 bytes / SHA-256: 8e35b4c177126a94ae764feb1aa1f1504560232e6c4c7864d8224d933f41e4ab
 
 ## 실제 보드 기록·실측
 
@@ -39,9 +48,12 @@
 | KEY1 리셋 | LED 00 | 전부 소등 | 영상 참조 | 일치 |
 
 - 영상:
-{{VIDEOS_25}}
+- [20260928_151243.mp4](<../../evidence/25/board/videos/20260928_151243.mp4>)
 - 사진:
-{{PHOTOS_25}}
+![A입력시보드LED](<../../evidence/25/board/photos/A입력시보드LED.png>)
+
+![터미널에서A입력화면](<../../evidence/25/board/photos/터미널에서A입력화면.png>)
+
 
 ## 비교·결론
 
@@ -50,5 +62,5 @@
 ## 제출 링크
 
 - 폴더: https://github.com/bandnewbie/UOS_ECE_project3/tree/main/lab3_25_uart_echo
-- 커밋: {{COMMIT_URL}}
-- 제출일: {{DATE}}
+- 커밋: [e17fc28](https://github.com/bandnewbie/UOS_ECE_project3/commit/e17fc28a6007147874ccfc1bbdadceca447086d9)
+- 제출일: 2026-10-08

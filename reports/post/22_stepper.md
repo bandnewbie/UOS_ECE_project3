@@ -2,7 +2,7 @@
 
 - 작성자: 박건우 (2025440050) / 분반·조: 이준화 교수님, 이해리 조교님 / G조
 - 실험일: 2026-09-28
-- 소스 커밋: {{COMMIT_URL}}
+- 소스 커밋: [e17fc28](https://github.com/bandnewbie/UOS_ECE_project3/commit/e17fc28a6007147874ccfc1bbdadceca447086d9)
 - 도구·버전: VS Code + Icarus Verilog 12.0 (fpga-lab-template v2.0.2), Vivado 2026.1
 - part: xc7s75fgga484-1 / 설계 top: `lab3_stepper` / 시뮬레이션 top: `tb_stepper` / XDC: `lab3_stepper/constraints/lab3_stepper.xdc`
 - 수행 PC: 본인 PC (DESKTOP-VM8EHT6)
@@ -15,9 +15,20 @@
 | Vivado (XSim, Run All) | `LAB3_STEPPER_PASS checks=8` | 831 ns |
 
 - Vivado 로그·캡처:
-{{VIVADO_22}}
+- [tcl_console.txt](<../../evidence/22/vivado/tcl_console.txt>)
+![화면 캡처 2026-09-28 144454](<../../evidence/22/vivado/화면 캡처 2026-09-28 144454.png>)
+
+![화면 캡처 2026-09-28 151942](<../../evidence/22/vivado/화면 캡처 2026-09-28 151942.png>)
+
+![화면 캡처 2026-09-28 152013](<../../evidence/22/vivado/화면 캡처 2026-09-28 152013.png>)
+
 - VS Code 로그·캡처:
-{{VSCODE_22}}
+- [simulation.txt](<../../evidence/22/vscode/simulation.txt>)
+- [simulation_modified.txt](<../../evidence/22/vscode/simulation_modified.txt>)
+- [simulation_restored.txt](<../../evidence/22/vscode/simulation_restored.txt>)
+![wave](<../../evidence/22/vscode/wave.png>)
+
+- [wave.vcd](<../../evidence/22/vscode/wave.vcd>)
 
 ## 합성·구현·비트스트림
 
@@ -25,7 +36,7 @@
 - DRC: 오류 0건 (CFGBVS-1 경고 1건)
 - 타이밍: WNS 16.252 ns, WHS 0.160 ns, 실패 endpoint 0 (All user specified timing constraints are met)
 - 경고: 합성 경고 0건, TIMING-18 4건, CFGBVS-1 1건, Project 1-5713 1건 (Vivado Commands)
-- bit 경로: {{BIT_PATH_22}} / 크기: {{BIT_SIZE_22}} bytes / SHA-256: {{BIT_SHA_22}}
+- bit 경로: lab3_22_stepper/vivado/stepper.runs/impl_1/lab3_stepper.bit / 크기: 3,687,015 bytes / SHA-256: 5384ca83aebb858cf7309745f26904422dfd499ead1353bf4e31ae5436bcbaac
 
 ## 실제 보드 기록·실측
 
@@ -40,9 +51,9 @@
 | 정지 유지 중 발열 | 코일 통전으로 발열 가능 | 관찰하지 않음 | — | — |
 
 - 영상:
-{{VIDEOS_22}}
+- [20260928_145111.mp4](<../../evidence/22/board/videos/20260928_145111.mp4>)
 - 사진:
-{{PHOTOS_22}}
+시연 대상이 아니어서 사진 없음 (영상으로 기록)
 
 ## 비교·결론
 
@@ -51,5 +62,5 @@
 ## 제출 링크
 
 - 폴더: https://github.com/bandnewbie/UOS_ECE_project3/tree/main/lab3_22_stepper
-- 커밋: {{COMMIT_URL}}
-- 제출일: {{DATE}}
+- 커밋: [e17fc28](https://github.com/bandnewbie/UOS_ECE_project3/commit/e17fc28a6007147874ccfc1bbdadceca447086d9)
+- 제출일: 2026-10-08
