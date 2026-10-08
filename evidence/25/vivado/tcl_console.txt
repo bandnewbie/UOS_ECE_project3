@@ -1,0 +1,98 @@
+# LAB3 실험 25 Vivado Tcl Console 로그 (세션 로그에서 해당 구간만 발췌)
+# 원본 파일: TCL_Console_2467.txt (원본 행 311~402)
+# 수행 PC: 본인 PC (Running On: DESKTOP-VM8EHT6, 세션 시작 Mon Sep 28 12:38:48 2026)
+# 도구: Vivado v2026.1 (64-bit)
+# 제외: 원본 행 26~206은 LAB2 폴더(lab2_02, lab2_04) 실행 구간
+# ------------------------------------------------------------
+create_project uart_echo C:/UOS_ECE_project3/lab3_25_uart_echo/vivado -part xc7s75fgga484-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2026.1/Vivado/data/ip'.
+set_property -name {xsim.simulate.runtime} -value {all} -objects [get_filesets sim_1]
+add_files -norecurse -scan_for_includes {C:/UOS_ECE_project3/lab3_25_uart_echo/src/lab3_uart_echo.v C:/UOS_ECE_project3/lab3_25_uart_echo/src/uart.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse -scan_for_includes C:/UOS_ECE_project3/lab3_25_uart_echo/sim/tb_uart_echo.sv
+update_compile_order -fileset sim_1
+add_files -fileset constrs_1 -norecurse C:/UOS_ECE_project3/lab3_25_uart_echo/constraints/lab3_uart_echo.xdc
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation  -mode behavioral
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Mon Sep 28 13:22:14 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'tb_uart_echo'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/UOS_ECE_project3/lab3_25_uart_echo/vivado/uart_echo.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/AMDDesignTools/2026.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_uart_echo' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/UOS_ECE_project3/lab3_25_uart_echo/vivado/uart_echo.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_uart_echo_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/UOS_ECE_project3/lab3_25_uart_echo/src/lab3_uart_echo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab3_uart_echo
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/UOS_ECE_project3/lab3_25_uart_echo/src/uart.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-311] analyzing module uart_tx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/UOS_ECE_project3/lab3_25_uart_echo/sim/tb_uart_echo.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_uart_echo
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/UOS_ECE_project3/lab3_25_uart_echo/vivado/uart_echo.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/UOS_ECE_project3/lab3_25_uart_echo/vivado/uart_echo.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_uart_echo_behav xil_defaultlib.tb_uart_echo xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2026.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2026.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_uart_echo_behav xil_defaultlib.tb_uart_echo xil_defaultlib.glbl -log elaborate.log 
+INFO: [XSIM 43-3493] Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.uart_rx(DIV=8)
+Compiling module xil_defaultlib.uart_tx(DIV=8)
+Compiling module xil_defaultlib.lab3_uart_echo(CLK_HZ=800,BAUD=1...
+Compiling module xil_defaultlib.tb_uart_echo
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_uart_echo_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/UOS_ECE_project3/lab3_25_uart_echo/vivado/uart_echo.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_uart_echo_behav -key {Behavioral:sim_1:Functional:tb_uart_echo} -tclbatch {tb_uart_echo.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_uart_echo.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run all
+LAB3_UART_ECHO_PASS checks=3
+$finish called at time : 9910 ns : File "C:/UOS_ECE_project3/lab3_25_uart_echo/sim/tb_uart_echo.sv" Line 33
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_uart_echo_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_runs synth_1 -jobs 4
+[Mon Sep 28 13:23:28 2026] Launched synth_1...
+Run output will be captured here: C:/UOS_ECE_project3/lab3_25_uart_echo/vivado/uart_echo.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Mon Sep 28 13:24:18 2026] Launched impl_1...
+Run output will be captured here: C:/UOS_ECE_project3/lab3_25_uart_echo/vivado/uart_echo.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Sep 28 13:25:25 2026] Launched impl_1...
+Run output will be captured here: C:/UOS_ECE_project3/lab3_25_uart_echo/vivado/uart_echo.runs/impl_1/runme.log
+

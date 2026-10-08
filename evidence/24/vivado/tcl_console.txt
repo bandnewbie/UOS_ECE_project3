@@ -1,0 +1,110 @@
+# LAB3 실험 24 Vivado Tcl Console 로그 (세션 로그에서 해당 구간만 발췌)
+# 원본 파일: TCL_Console_2467.txt (원본 행 207~310)
+# 수행 PC: 본인 PC (Running On: DESKTOP-VM8EHT6, 세션 시작 Mon Sep 28 12:38:48 2026)
+# 도구: Vivado v2026.1 (64-bit)
+# 제외: 원본 행 26~206은 LAB2 폴더(lab2_02, lab2_04) 실행 구간
+# ------------------------------------------------------------
+create_project character_lcd C:/UOS_ECE_project3/lab3_24_character_lcd/vivado -part xc7s75fgga484-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/AMDDesignTools/2026.1/Vivado/data/ip'.
+add_files -norecurse -scan_for_includes C:/UOS_ECE_project3/lab3_24_character_lcd/src/lab3_character_lcd.v
+update_compile_order -fileset sources_1
+add_files -fileset constrs_1 -norecurse C:/UOS_ECE_project3/lab3_24_character_lcd/constraints/lab3_character_lcd.xdc
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse -scan_for_includes C:/UOS_ECE_project3/lab3_24_character_lcd/sim/tb_character_lcd.sv
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+set_property -name {xsim.simulate.runtime} -value {all} -objects [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation  -mode behavioral
+INFO: [Vivado 12-25911] Executing simulation for 'XSim' simulator
+INFO: [Vivado 12-28535] Process started - Mon Sep 28 13:10:12 2026
+
+INFO: [Vivado 12-12493] Simulation top is 'tb_character_lcd'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/UOS_ECE_project3/lab3_24_character_lcd/vivado/character_lcd.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/AMDDesignTools/2026.1/Vivado/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_character_lcd' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/UOS_ECE_project3/lab3_24_character_lcd/vivado/character_lcd.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_character_lcd_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/UOS_ECE_project3/lab3_24_character_lcd/src/lab3_character_lcd.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab3_character_lcd
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/UOS_ECE_project3/lab3_24_character_lcd/sim/tb_character_lcd.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_character_lcd
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/UOS_ECE_project3/lab3_24_character_lcd/vivado/character_lcd.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/UOS_ECE_project3/lab3_24_character_lcd/vivado/character_lcd.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_character_lcd_behav xil_defaultlib.tb_character_lcd xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2026.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/AMDDesignTools/2026.1/Vivado/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_character_lcd_behav xil_defaultlib.tb_character_lcd xil_defaultlib.glbl -log elaborate.log 
+INFO: [XSIM 43-3493] Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.lab3_character_lcd(TICK_CYCLES=2...
+Compiling module xil_defaultlib.tb_character_lcd
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_character_lcd_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/UOS_ECE_project3/lab3_24_character_lcd/vivado/character_lcd.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_character_lcd_behav -key {Behavioral:sim_1:Functional:tb_character_lcd} -tclbatch {tb_character_lcd.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_character_lcd.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run all
+LAB3_LCD_PASS bytes=40
+$finish called at time : 8130 ns : File "C:/UOS_ECE_project3/lab3_24_character_lcd/sim/tb_character_lcd.sv" Line 31
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_character_lcd_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for all
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_runs synth_1 -jobs 4
+[Mon Sep 28 13:11:09 2026] Launched synth_1...
+Run output will be captured here: C:/UOS_ECE_project3/lab3_24_character_lcd/vivado/character_lcd.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Mon Sep 28 13:12:07 2026] Launched impl_1...
+Run output will be captured here: C:/UOS_ECE_project3/lab3_24_character_lcd/vivado/character_lcd.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Mon Sep 28 13:13:27 2026] Launched impl_1...
+Run output will be captured here: C:/UOS_ECE_project3/lab3_24_character_lcd/vivado/character_lcd.runs/impl_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7s75fgga484-1
+INFO: [Device 21-403] Loading part xc7s75fgga484-1
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2159.254 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2026.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/UOS_ECE_project3/lab3_24_character_lcd/constraints/lab3_character_lcd.xdc]
+Finished Parsing XDC File [C:/UOS_ECE_project3/lab3_24_character_lcd/constraints/lab3_character_lcd.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2159.254 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 2463.973 ; gain = 304.719
+close_project

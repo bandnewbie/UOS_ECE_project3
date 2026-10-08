@@ -1,0 +1,23 @@
+# LAB3 실험 22 Vivado Tcl Console 로그 (사용자가 붙여 넣은 세션 로그 중 시뮬레이션 구간, 진행 메시지 일부 생략)
+# 수행 PC: DESKTOP-VM8EHT6 (본인 PC), 세션 시작 Thu Oct  8 17:16:17 2026 (22번 시뮬레이션 재실행)
+# 도구: Vivado v2026.1 (64-bit)
+# ------------------------------------------------------------
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected.
+start_gui
+open_project C:/UOS_ECE_project3/lab3_22_stepper/vivado/stepper.xpr
+WARNING: [Project 1-5713] Board part '' set for the project  is not found. BoardPart property will be unset. Please select board from latest repo build 
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation  -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_stepper'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/UOS_ECE_project3/lab3_22_stepper/vivado/stepper.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_stepper_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+source tb_stepper.tcl
+# run all
+LAB3_STEPPER_PASS checks=8
+$finish called at time : 831 ns : File "C:/UOS_ECE_project3/lab3_22_stepper/sim/tb_stepper.sv" Line 20
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_stepper_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for all
